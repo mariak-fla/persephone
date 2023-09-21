@@ -62,7 +62,7 @@ button.bmain {
     color: var(--gray-50);
     border: none;
     width: 100%;
-    padding: .2rem 0;
+    padding: 1rem 0 1rem;
 }
 
 #nav {
@@ -175,11 +175,13 @@ section#hero {
 h1 {
     font-size: clamp(4rem, 1.75rem + 6vw, 7.2rem);
     color: var(--gray-700);
+    padding-bottom: 2.5rem;
 }
 
 #hero p {
     font-size: clamp(2rem, 1.75rem + 0.75vw, 2.4rem);
     color: var(--gray-500);
+    padding-bottom: 2.5rem;
 }
 
 @media (min-width: 1000px) {
@@ -226,4 +228,54 @@ h1 {
         color: white;
         stroke: white;
     }
+}
+
+section#arranjos {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+#arranjos h2 {
+    font-size: 32px;
+    padding-bottom: 1rem;
+}
+
+#arranjos h3 {
+    font-size: 20px;
+    padding-bottom: 5rem;
+}
+
+#arranjos p {
+    font-size: 16px;
+    padding-bottom: 5rem;
+    text-align: justify;
+}
+
+#arranjos button {
+    align-items: end;
+    justify-content: center;
+}
+
+button.bvaz1 {
+    color: var(--gray-50);
+    border: .15rem;
+    border-color: var(--gray-50);
+    width: 100%;
+    padding: 1rem 0 1rem;
+}
+
+/* provisório */
+section#decoracao{
+    display: none;
+}
+section#eventos {
+    display: none;
+}
+section#presentes {
+    display: none;
+}
+footer {
+    display: none;
 }
