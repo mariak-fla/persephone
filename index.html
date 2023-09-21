@@ -12,19 +12,21 @@
 <body>
     <header>
         <div id="nav">
-            <div class="logo">persephone</div>
+            <div class="logo">
+                <a href="/">persephone</a>
+            </div>
             
-            <ul>
-                <li>
+            <ul id="navMenu">
+                <li onclick="toggleMenu();">
                     <a href="#arranjos">ARRANJOS</a>
                 </li>
-                <li>
+                <li onclick="toggleMenu();">
                     <a href="#eventos">EVENTOS</a>
                 </li>
-                <li>
+                <li onclick="toggleMenu();">
                     <a href="#decoracao">DECORAÇÃO</a>
                 </li>
-                <li>
+                <li onclick="toggleMenu();">
                     <a href="#presentes">PRESENTES</a>
                 </li>
             </ul>
@@ -36,7 +38,11 @@
                 Vamos conversar?
             </button>
             
-            <div class="hamburger"></div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
     </header>
 

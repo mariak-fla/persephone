@@ -30,6 +30,7 @@ ul {
 a, button {
     transition: 200ms;
     cursor: pointer;
+    text-decoration: none;
 }
 
 button {
@@ -48,43 +49,96 @@ body {
     background-color: white;
 }
 
-.logo {
+.logo a {
     color: var(--gray-800);
     font-family: var(--ff-title);
     text-transform: uppercase;
     font-size: clamp(2rem, 1.75rem + .75vw, 2.4rem);
 }
 
-#nav ul, #nav button {
+.hamburger {
+    display: block;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 2.5rem;
+    height: 3px;
+    border-radius: 222px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--gray-500);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+#nav button {
     display: none;
+}
+
+#navMenu {
+    position: fixed;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    left: -120%;
+    top: 5rem;
+
+    background-color: white;
+
+    padding: 2rem;
+
+    font-size: clamp(1.4rem, 1.4rem + 0.75vw, 1.6rem);
+    font-family: var(--ff-buttons);
+    text-transform: uppercase;
+    
+    width: 100%;
+    text-align: right;
+
+    transition: 250ms ease;
+
+    z-index: 10;
+}
+
+#navMenu a {
+    color: var(--gray-700);
+}
+
+#navMenu.active {
+    left: 0;
 }
 
 @media (min-width: 1000px) {
     #nav {
-        padding: 2rem min(5rem, 10vw);
-    }
-
-    #nav ul, #nav button {
-        display: flex;
+        padding: 1rem 4rem;
     }
 
     #nav .hamburger {
         display: none;
     }
 
-    #nav ul {
+    #navMenu {
+        flex-direction: row;
+        position: relative;
+        left: 0;
+        top: 0;
+        padding: 0;
+        background: none;
         gap: min(2.5vw, 5rem);
-    }
-
-    #nav ul a, #nav button {
-        font-size: clamp(1.4rem, 1.4rem + 0.75vw, 1.6rem);
-    }
-    
-    #nav ul a {
-        font-family: var(--ff-buttons);
-        text-decoration: none;
-        text-transform: uppercase;
-        color: var(--gray-700);
+        justify-content: center;
     }
 
     #nav ul a:hover {
@@ -92,6 +146,8 @@ body {
     }
 
     #nav button {
+        display: flex;
+        font-size: clamp(1.4rem, 1.4rem + 0.75vw, 1.6rem);
         align-items: center;
         justify-content: center;
         background-color: white;
