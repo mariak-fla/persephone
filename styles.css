@@ -173,7 +173,7 @@ button.bmain:hover {
 
 .heroimg::before {
     background-color: var(--main-light);
-    z-index: -2;
+    z-index: 1;
 }
 
 /* .heroimg::after {
@@ -187,6 +187,11 @@ section#hero {
     gap: 5vh;
     align-items: center;
     justify-content: center;
+
+    background-image: url("assets/hero-bg.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .herotxt {
@@ -198,6 +203,7 @@ section#hero {
 .heroimg img {
     width: clamp(25rem, 14rem + 28vw, 40rem);
     position: relative;
+    z-index: 2;
 }
 
 h1 {
