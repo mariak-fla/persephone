@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --ff-body: "Quattrocento Sans", sans-serif;
+    --ff-buttons: "DM Sans", sans-serif;
+    --ff-title: "DM Serif Display", serif;
+
+    --gray-50: #fafaf9;
+    --gray-100: #f5f5f4;
+    --gray-500: #78716c;
+    --gray-700: #44403c;
+    --gray-800: #292524;
+
+    --main-dark: #581c87;
+    --main: #a855f7;
+    --main-light: #C9B0E4;
+}
+
+ul {
+    list-style: none;
+}
+
+a, button {
+    transition: 200ms;
+    cursor: pointer;
+}
+
+button {
+    font-family: var(--ff-buttons);
+}
+
+body {
+    background-color: var(--gray-50);
+}
+
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2.5rem;
+    background-color: white;
+}
+
+.logo {
+    color: var(--gray-800);
+    font-family: var(--ff-title);
+    text-transform: uppercase;
+    font-size: clamp(2rem, 1.75rem + .75vw, 2.4rem);
+}
+
+#nav ul, #nav button {
+    display: none;
+}
+
+@media (min-width: 1000px) {
+    #nav {
+        padding: 2rem min(5rem, 10vw);
+    }
+
+    #nav ul, #nav button {
+        display: flex;
+    }
+
+    #nav .hamburger {
+        display: none;
+    }
+
+    #nav ul {
+        gap: min(2.5vw, 5rem);
+    }
+
+    #nav ul a, #nav button {
+        font-size: clamp(1.4rem, 1.4rem + 0.75vw, 1.6rem);
+    }
+    
+    #nav ul a {
+        font-family: var(--ff-buttons);
+        text-decoration: none;
+        text-transform: uppercase;
+        color: var(--gray-700);
+    }
+
+    #nav ul a:hover {
+        border-bottom: 2px solid var(--main-dark);
+    }
+
+    #nav button {
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border: 2px solid var(--main-dark);
+        border-radius: 333rem;
+        color: var(--main-dark);
+        padding: .25rem 2.5rem;
+        gap: 1.5rem;
+    }
+
+    #nav button:hover, #nav button:hover path {
+        background-color: var(--main-dark);
+        color: white;
+        stroke: white;
+    }
+}
