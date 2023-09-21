@@ -28,7 +28,7 @@ ul {
 }
 
 a, button {
-    transition: 200ms;
+    transition: 200ms ease-in-out;
     cursor: pointer;
     text-decoration: none;
 }
@@ -123,7 +123,7 @@ body {
 
 @media (min-width: 1000px) {
     #nav {
-        padding: 1rem 4rem;
+        padding: 1rem 5vw;
     }
 
     #nav .hamburger {
@@ -147,6 +147,7 @@ body {
 
     #nav button {
         display: flex;
+        align-items: center;
         font-size: clamp(1.4rem, 1.4rem + 0.75vw, 1.6rem);
         align-items: center;
         justify-content: center;
@@ -155,6 +156,7 @@ body {
         border-radius: 333rem;
         color: var(--main-dark);
         padding: .25rem 2.5rem;
+        width: max(24%, 35rem);
         gap: 1.5rem;
     }
 
