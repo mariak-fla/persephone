@@ -33,6 +33,11 @@ a, button {
     text-decoration: none;
 }
 
+h1, h2 {
+    font-family: var(--ff-title);
+    font-weight: normal;
+}
+
 button {
     font-family: var(--ff-buttons);
 }
