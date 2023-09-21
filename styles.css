@@ -56,6 +56,10 @@ body {
     font-size: clamp(2rem, 1.75rem + .75vw, 2.4rem);
 }
 
+.logo a:hover {
+    color: var(--gray-500);
+}
+
 .hamburger {
     display: block;
     cursor: pointer;
