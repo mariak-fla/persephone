@@ -232,11 +232,19 @@ section#arranjos {
     flex-direction: column;
     align-items: start;
     justify-content: center;
+    background-color: var(--main-dark);
+    color: var(--gray-50);
 }
 
 #arranjos h2 {
     font-size: 32px;
     padding-bottom: 1rem;
+}
+
+.arranjosimg img {
+    height: 32rem;
+    padding-left: 5rem;
+    padding-bottom: 5rem;
 }
 
 #arranjos h3 {
