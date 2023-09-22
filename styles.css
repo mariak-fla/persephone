@@ -273,7 +273,7 @@ section#arranjos {
 
 .arranjosimg::before {
     content: "";
-    position: absolute;
+    position: relative;
     display: block;
     width: clamp(20rem, 14rem + 20vw, 40rem);
     height: clamp(32rem, 12rem + 53.333vw, 60rem);
