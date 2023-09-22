@@ -2,17 +2,17 @@ const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector("#navMenu");
 
 hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
+    hamburger.classList.toggle("active")
+    navMenu.classList.toggle("active")
 })
 
 document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
+    hamburger.classList.remove("active")
+    navMenu.classList.remove("active")
 }))
 
-const body = document.body;
-let lastScroll = 0;
+const body = document.body
+let lastScroll = 0
 
 window.addEventListener("scroll", () => {
     const currentScroll = window.scrollY
@@ -22,7 +22,7 @@ window.addEventListener("scroll", () => {
     }
 
     if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
-        body.classList.remove("scroll-up")
+        //body.classList.remove("scroll-up")
         body.classList.add("scroll-down")
     }
 
