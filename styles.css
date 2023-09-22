@@ -75,16 +75,28 @@ button.bmain {
     padding: 1rem 0 1rem;
 }
 
-button.bmain:hover {
+button:not(#contato):hover {
     letter-spacing: 2px;
 }
 
-button.bvaz1 {
+button.bvaz1, button.btrans {
     color: var(--gray-50);
     border: 2px solid var(--gray-50);
-    background-color: transparent;
     width: 100%;
-    padding: 1rem 0 1rem;
+    padding: .5rem 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+button.btrans {
+    background-color: rgba(255,255,255,.15);
+}
+
+button.bvaz1 {
+    background-color: transparent;
 }
 
 #nav {
@@ -193,11 +205,6 @@ button.bvaz1 {
     z-index: 1;
 }
 
-/* .heroimg::after {
-    border: 1px solid var(--gray-700);
-    z-index: -1;
-}
- */
 section#hero {
     margin-top: 2rem;
     display: flex;
@@ -230,8 +237,11 @@ h1 {
     padding-bottom: 2.5rem;
 }
 
-#hero p {
+#hero p, .pBorder {
     font-size: clamp(2rem, 1.75rem + 0.75vw, 2.4rem);
+}
+
+#hero p {
     color: var(--gray-500);
     padding-bottom: 2.5rem;
 }
@@ -289,17 +299,49 @@ section#arranjos {
     justify-content: center;
 }
 
-/* provisório */
-section#decoracao{
-    display: none;
-}
 section#eventos {
-    display: none;
+    background-image: url("assets/evento.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    padding: 0;
+
+    position: relative;
 }
-section#presentes {
-    display: none;
+
+.eventostxt {
+    background-color: rgba(0,0,0,.35);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+    align-items: center;
+    text-align: center;
+    padding: 0 2.5rem;
 }
-footer {
+
+.pBorder {
+    color: var(--gray-50);
+    text-align: left;
+    border-left: 2px solid var(--gray-50);
+    padding-left: 1rem;
+}
+
+section#eventos h2, section#presentes h2 {
+    color: var(--gray-50);
+    font-size: clamp(4.5rem, 0.571rem + 10.476vw, 10rem);
+    position: absolute;
+}
+
+section#eventos h2 {
+    bottom: -1.5rem;
+    right: 10vw;
+}
+
+/* provisório */
+section#decoracao, section#presentes, footer {
     display: none;
 }
 
@@ -329,7 +371,7 @@ footer {
     }
 
     #nav ul a:hover {
-        border-bottom: 2px solid var(--main-dark);
+        letter-spacing: 2px;
     }
 
     #nav button {
@@ -347,6 +389,10 @@ footer {
         gap: 1.5rem;
     }
 
+    #nav button path {
+        transition: 200ms ease-in-out;
+    }
+
     #nav button:hover, #nav button:hover path {
         background-color: var(--main-dark);
         color: white;
@@ -362,5 +408,25 @@ footer {
     .herotxt {
         width: min(60rem, 40vw);
         gap: 2.5rem;
+    }
+
+    section#eventos {
+        height: 75vh;
+    }
+
+    .eventostxt {
+        align-items: start;
+        text-align: left;
+        padding: 0 50vw 0 10vw;
+    }
+    
+    .pBorder {
+        border-left: 3px solid var(--gray-50);
+        padding-left: 2rem;
+    }
+
+    section#eventos h2 {
+        bottom: -3.5rem;
+        right: 10vw;
     }
 }
