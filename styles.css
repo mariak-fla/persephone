@@ -237,16 +237,40 @@ h1 {
 }
 
 section#arranjos {
-    margin-top: 12.5rem;
+    padding-top: 25vh;
     display: flex;
     flex-direction: column;
     align-items: start;
-    justify-content: center;
+    justify-content: center;    
+    background-color: var(--main-dark);
+    color: var(--gray-50);
+    height: 100vh;
 }
 
 #arranjos h2 {
     font-size: 32px;
     padding-bottom: 1rem;
+}
+
+.arranjosimg img {
+    width: clamp(20rem, 14rem + 28vw, 40rem);
+    position: relative;
+    z-index: 2;
+    padding-left: 2.5rem;
+    padding-bottom: 5rem;
+    margin-top: -10rem;
+}
+
+.arranjosimg::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: clamp(20rem, 14rem + 20vw, 40rem);
+    height: clamp(32rem, 12rem + 53.333vw, 60rem);
+    background-color: transparent;
+    border: 1px solid var(--gray-50);
+    z-index: 1;
+    margin-top: -7rem;
 }
 
 #arranjos h3 {
